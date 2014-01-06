@@ -9,7 +9,7 @@ test( "When data centre is selected in a end list, it is removed from b end list
 	assertContains(bEndOptions, 'c');
 
 	//Select one of the options
-	$('#aEnd').val('2').trigger('change');
+	$('#aEnd').val('b').trigger('change');
 
 	//Get the updated options
 	bEndOptions = $('#bEnd').text();

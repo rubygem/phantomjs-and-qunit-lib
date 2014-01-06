@@ -9,9 +9,9 @@
 		<div id="qunit"></div>
 		<div id="qunit-fixture"></div>
 		<select id="aEnd">
-		  <option>1</option>
-		  <option>2</option>
-		  <option>3</option>
+		  <option>a</option>
+		  <option>b</option>
+		  <option>c</option>
 		</select>
 		<br />
 		<select id="bEnd">
@@ -33,9 +33,9 @@
 			        $('#bEnd').html(selectClone.html())
 			        switch(val) {
 			            //if 2 is selected remove C
-			            case 2 : $('#bEnd').find('option:contains(c)').remove();break;
+			            case 'b' : $('#bEnd').find('option:contains(c)').remove();break;
 			            //if 3 is selected remove A
-			            case 3 : $('#bEnd').find('option:contains(a)').remove();break;
+			            case 'c' : $('#bEnd').find('option:contains(a)').remove();break;
 			        }
 			    });
 			});
