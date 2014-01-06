@@ -4,7 +4,7 @@ test( "When data centre is selected in a end list, it is removed from b end list
 	var bEndOptions = $('#bEnd').text();
 	
 	//Check everything is there
-	assertContains(bEndOptions, 'a');
+	assertContains(bEndOptions, '3');
 	assertContains(bEndOptions, 'b');
 	assertContains(bEndOptions, '2');
 
@@ -15,7 +15,7 @@ test( "When data centre is selected in a end list, it is removed from b end list
 	bEndOptions = $('#bEnd').text();
 
 	//Check the option has been removed
-	assertContains(bEndOptions, 'a');
+	assertContains(bEndOptions, '3');
 	assertContains(bEndOptions, 'b');
 	assertDoesNotContain(bEndOptions, '2');
 });
