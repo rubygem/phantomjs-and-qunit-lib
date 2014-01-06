@@ -1,0 +1,48 @@
+{
+  "name": "topcatz",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node website.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Allegro-Networks/topcat"
+  },
+  "dependencies": {
+    "express": "3.2.6",
+    "ejs": "*",
+    "less-middleware": "*",
+    "underscore": "*",
+    "passport": "*",
+    "passport-authic": "*",
+    "redis-repository": "*",
+    "mongorepository": "1.0.2",
+    "simple-loggly": "*",
+    "needle": "*",
+    "restify": "*",
+    "uuid": "*",
+    "hashids": "*",
+    "connect-mongodb": "*",
+    "dateformat": "*",
+    "date-utils": "*",
+    "request": "*",
+    "date-format-lite": "*",
+    "allegro-api": "git+https://rubygem:c4mer0ng@github.com/Allegro-Networks/allegro-api.git#release",
+    "allegro-management-api": "git+https://rubygem:c4mer0ng@github.com/Allegro-Networks/allegro-management-api.git#release"
+  },
+  "devDependencies": {
+    "zombie": "*",
+    "mocha": "*",
+    "chai": "*",
+    "jshint": "*",
+    "get": "*",
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-uglify": "~0.2.2"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
