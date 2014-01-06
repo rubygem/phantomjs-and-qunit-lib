@@ -33,7 +33,7 @@
 			        $('#bEnd').html(selectClone.html())
 			        switch(val) {
 			            //if 2 is selected remove C
-			            case "2" : $('#bEnd').find('option:contains(2)').remove();break;
+			            case "2" : $('#bEnd').find('option:contains('+val+')').remove();break;
 			            //if 3 is selected remove A
 			            case "3" : $('#bEnd').find('option:contains(3)').remove();break;
 			        }
