@@ -17,7 +17,7 @@
 		<select id="bEnd">
 		  <option>a</option>
 		  <option>b</option>
-		  <option>c</option>
+		  <option>2</option>
 		</select>
 		<script src="http://code.jquery.com/qunit/qunit-1.12.0.js"></script>
 		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
@@ -33,7 +33,7 @@
 			        $('#bEnd').html(selectClone.html())
 			        switch(val) {
 			            //if 2 is selected remove C
-			            case 2 : $('#bEnd').find('option:contains(c)').remove();break;
+			            case 2 : $('#bEnd').find('option:contains(2)').remove();break;
 			            //if 3 is selected remove A
 			            case 3 : $('#bEnd').find('option:contains(a)').remove();break;
 			        }

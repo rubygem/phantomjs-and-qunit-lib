@@ -6,7 +6,7 @@ test( "When data centre is selected in a end list, it is removed from b end list
 	//Check everything is there
 	assertContains(bEndOptions, 'a');
 	assertContains(bEndOptions, 'b');
-	assertContains(bEndOptions, 'c');
+	assertContains(bEndOptions, '2');
 
 	//Select one of the options
 	$('#aEnd').val('2').trigger('change');
@@ -17,7 +17,7 @@ test( "When data centre is selected in a end list, it is removed from b end list
 	//Check the option has been removed
 	assertContains(bEndOptions, 'a');
 	assertContains(bEndOptions, 'b');
-	assertDoesNotContain(bEndOptions, 'c');
+	assertDoesNotContain(bEndOptions, '2');
 });
 
 function assertContains(text, subString){
