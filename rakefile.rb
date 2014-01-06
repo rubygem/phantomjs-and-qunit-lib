@@ -1,5 +1,4 @@
 task :default => [:ui_tests]
-multitask :dependencies => [:node_dependencies]
 @run_options = {verbose: Rake.application.options.trace}
 NYAN_REPORTER = 'nyan'
 
@@ -7,25 +6,8 @@ task :node_dependencies do
 	rake_sh 'npm update'
 end
 
-task :git => :ruby_dependencies do 
-	require 'bundler/setup'
-	require 'git_repository'
-	message = ENV['m']
-	raise 'no commit message specified' if message.nil?
-	git = GitRepository.new
-	git.pull
-	git.add
-	git.commit(message: message )
-	git.push
-end
-
-task :ui_tests do
-	phantom_js('./tests/ui')
-end
-
-task :unit_tests do
-	test_format = 'qunit'
-	mocha("./tests/unit",NYAN_REPORTER,test_format)
+task :ui_tests => [:node_dependencies] do
+	phantom_js('./tests')
 end
 
 def committing_code?
