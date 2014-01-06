@@ -1,11 +1,11 @@
 test( "When data centre is selected in a end list, it is removed from b end list ", function() {
-	var aEndOptions = $('#theOptions1').text();
+	var aEndOptions = $('#aEnd').text();
 	var bEndOptions = $('#theOptions2').text();
 	assertContains(bEndOptions, 'a');
 	assertContains(bEndOptions, 'b');
 	assertContains(bEndOptions, 'c');
 
-	$('#theOptions1').val('2').trigger('change');
+	$('#aEnd').val('2').trigger('change');
 
 	assertContains($('#theOptions2').text(), 'a');
 	assertContains($('#theOptions2').text(), 'b');

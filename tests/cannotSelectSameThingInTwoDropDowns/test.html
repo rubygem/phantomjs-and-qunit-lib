@@ -8,7 +8,7 @@
 	<body>
 		<div id="qunit"></div>
 		<div id="qunit-fixture"></div>
-		<select id="theOptions1">
+		<select id="aEnd">
 		  <option value="1">1</option>
 		  <option value="2">2</option>
 		  <option value="3">3</option>
@@ -26,7 +26,7 @@
 			$(document).ready(function() {
 			    //copy the second select, so we can easily reset it
 			    var selectClone = $('#theOptions2').clone();
-			    $('#theOptions1').change(function() {
+			    $('#aEnd').change(function() {
 			        var val = parseInt($(this).val());
 			        console.log('They just selected this', val);
 			        //reset the second select on each change
