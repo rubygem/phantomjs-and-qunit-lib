@@ -25,9 +25,3 @@ test( "Build url with encoded names of dataCentres with funny characters", funct
 	
 	equal( bob(), '/quotationRequest/ports?aEnd='+encodedAEndDataCentre+'&bEnd='+encodedBEndDataCentre);
 });
-
-function bob(){
-	var aEnd = encodeURI($('#aEnd').val());
-	var bEnd = encodeURI($('#bEnd').val());
-	return '/quotationRequest/ports?aEnd='+aEnd+'&bEnd='+bEnd
-}
