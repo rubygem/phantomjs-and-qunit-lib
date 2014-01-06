@@ -14,7 +14,7 @@
 		  <option value="3">3</option>
 		</select>
 		<br />
-		<select id="theOptions2">
+		<select id="bEnd">
 		  <option value="a">a</option>
 		  <option value="b">b</option>
 		  <option value="c">c</option>
@@ -25,17 +25,17 @@
 		<script>
 			$(document).ready(function() {
 			    //copy the second select, so we can easily reset it
-			    var selectClone = $('#theOptions2').clone();
+			    var selectClone = $('#bEnd').clone();
 			    $('#aEnd').change(function() {
 			        var val = parseInt($(this).val());
 			        console.log('They just selected this', val);
 			        //reset the second select on each change
-			        $('#theOptions2').html(selectClone.html())
+			        $('#bEnd').html(selectClone.html())
 			        switch(val) {
 			            //if 2 is selected remove C
-			            case 2 : $('#theOptions2').find('option:contains(c)').remove();break;
+			            case 2 : $('#bEnd').find('option:contains(c)').remove();break;
 			            //if 3 is selected remove A
-			            case 3 : $('#theOptions2').find('option:contains(a)').remove();break;
+			            case 3 : $('#bEnd').find('option:contains(a)').remove();break;
 			        }
 			    });
 			});
