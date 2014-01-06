@@ -27,15 +27,15 @@
 			    //copy the second select, so we can easily reset it
 			    var selectClone = $('#bEnd').clone();
 			    $('#aEnd').change(function() {
-			        var val = parseInt($(this).val());
+			        var val = $(this).val();
 			        console.log('They just selected this', val);
 			        //reset the second select on each change
 			        $('#bEnd').html(selectClone.html())
 			        switch(val) {
 			            //if 2 is selected remove C
-			            case 2 : $('#bEnd').find('option:contains(2)').remove();break;
+			            case "2" : $('#bEnd').find('option:contains(2)').remove();break;
 			            //if 3 is selected remove A
-			            case 3 : $('#bEnd').find('option:contains(3)').remove();break;
+			            case "3" : $('#bEnd').find('option:contains(3)').remove();break;
 			        }
 			    });
 			});
