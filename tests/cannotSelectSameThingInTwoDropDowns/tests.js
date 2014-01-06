@@ -5,7 +5,7 @@ test( "When data centre is selected in a end list, it is removed from b end list
 	
 	//Check everything is there
 	assertContains(bEndOptions, '3');
-	assertContains(bEndOptions, 'b');
+	assertContains(bEndOptions, '1');
 	assertContains(bEndOptions, '2');
 
 	//Select one of the options
@@ -16,7 +16,7 @@ test( "When data centre is selected in a end list, it is removed from b end list
 
 	//Check the option has been removed
 	assertContains(bEndOptions, '3');
-	assertContains(bEndOptions, 'b');
+	assertContains(bEndOptions, '1');
 	assertDoesNotContain(bEndOptions, '2');
 });
 
