@@ -1,13 +1,33 @@
 test( "Build url based on dataCentres", function() {
-	$('#aEnd').append('<option>Jimmy</option>');
-	$('#bEnd').append('<option>Rolf</option>');
-	$('#aEnd').val('Jimmy').trigger('change');
-	$('#bEnd').val('Rolf').trigger('change');
-	equal( bob(), '/quotationRequest/ports?aEnd=Jimmy&bEnd=Rolf');
+	var aEndDataCentre = 'Jimmy';
+	var bEndDataCentre = 'Rolf';
+
+	$('#aEnd').append('<option>'+aEndDataCentre+'</option>');
+	$('#bEnd').append('<option>'+bEndDataCentre+'</option>');
+	
+	$('#aEnd').val(aEndDataCentre).trigger('change');
+	$('#bEnd').val(bEndDataCentre).trigger('change');
+	
+	equal( bob(), '/quotationRequest/ports?aEnd='+aEndDataCentre+'&bEnd='+bEndDataCentre);
+});
+
+test( "Build url with encoded names of dataCentres with funny characters", function() {
+	var aEndDataCentre = 'Hex 6&7';
+	var bEndDataCentre = 'Hex 8&9';
+	var encodedAEndDataCentre = encodeURI(aEndDataCentre);
+	var encodedBEndDataCentre = encodeURI(bEndDataCentre);
+
+	$('#aEnd').append('<option>'+aEndDataCentre+'</option>');
+	$('#bEnd').append('<option>'+bEndDataCentre+'</option>');
+	
+	$('#aEnd').val(aEndDataCentre).trigger('change');
+	$('#bEnd').val(bEndDataCentre).trigger('change');
+	
+	equal( bob(), '/quotationRequest/ports?aEnd='+encodedAEndDataCentre+'&bEnd='+encodedBEndDataCentre);
 });
 
 function bob(){
-	var aEnd = $('#aEnd').val();
-	var bEnd = $('#bEnd').val();
+	var aEnd = encodeURI($('#aEnd').val());
+	var bEnd = encodeURI($('#bEnd').val());
 	return '/quotationRequest/ports?aEnd='+aEnd+'&bEnd='+bEnd
 }
